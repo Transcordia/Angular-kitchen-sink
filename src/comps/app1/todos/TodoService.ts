@@ -43,7 +43,7 @@ import {
     Actions
 } from "angular2-redux-util";
 import {CommBroker} from "../../../services/CommBroker";
-import {Ngmslib} from "ng-mslib";
+// import {Ngmslib} from "ng-mslib";
 import {ToastsManager} from "ng2-toastr";
 
 export const ADD_TODO = 'ADD_TODO';
@@ -57,11 +57,12 @@ const url: string = 'http://secure.digitalsignage.com';
 
 export class TodoItemModel {
     private task: String;
-    private id: string;
+    private id: any;
 
     constructor(text: String, id?: string) {
         this.task = text;
-        this.id = id || Ngmslib.guid();
+        // this.id = id || Ngmslib.guid();
+        this.id = id || Math.random();
     }
 
     get text() {

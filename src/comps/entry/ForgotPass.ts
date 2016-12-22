@@ -8,7 +8,7 @@ import 'rxjs/add/operator/throttleTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/do';
 import {Observable} from "rxjs/Observable";
-import {Ngmslib} from "ng-mslib";
+// import {Ngmslib} from "ng-mslib";
 
 @Component({
     providers: [ForgotPass],
@@ -45,13 +45,13 @@ export class ForgotPass {
         var doubleClickStream = this.clickStream.buffer(this.clickStream.throttleTime(450)).map((e)=> {
             return e.length
         }).filter((e:any)=> {
-            Ngmslib.log('total clicks ' + e);
+            // Ngmslib.log('total clicks ' + e);
             if (e == 2)
                 this.disableButton = true;
             return e == 2
         }).delay(2000);
         doubleClickStream.subscribe(e=> {
-            Ngmslib.log('double click');
+            // Ngmslib.log('double click');
             this.disableButton = false;
         });
     }

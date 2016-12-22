@@ -1,5 +1,5 @@
 import {Subscriber, Observable} from "rxjs";
-import {Ngmslib} from "ng-mslib";
+// import {Ngmslib} from "ng-mslib";
 import {Component} from "@angular/core";
 // import {
 //     Subscriber,
@@ -16,7 +16,7 @@ export class Compbaser {
   protected me = '';
 
   constructor() {
-    this.me = Ngmslib.GetCompSelector(this.constructor)
+    // this.me = Ngmslib.GetCompSelector(this.constructor)
   }
 
   protected cancelOnDestroy(i_function: any): void {

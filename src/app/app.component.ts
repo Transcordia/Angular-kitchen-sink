@@ -1,5 +1,5 @@
 import {Component, ViewContainerRef, forwardRef, Inject} from '@angular/core';
-import {Ngmslib} from "ng-mslib";
+// import {Ngmslib} from "ng-mslib";
 import {ToastsManager, ToastOptions} from "ng2-toastr";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Http} from "@angular/http";
@@ -31,12 +31,12 @@ export class AppComponent {
                 private appdbAction:AppdbAction,
                 private localStorage: LocalStorage) {
 
-        Ngmslib.GlobalizeStringJS();
+        // Ngmslib.GlobalizeStringJS();
         this.kitchenSink = packageJson.version;
         this.ngVersion = VERSION.full
 
         this.toastr.setRootViewContainerRef(vRef);
-        console.log(StringJS('string-js-is-init').humanize().s);
+        // console.log(StringJS('string-js-is-init').humanize().s);
         // this.appStore.dispatch(appdbAction.appStartTime());
         this.commBroker.setService(Consts.Services().App, this);
         Observable.fromEvent(window, 'resize').debounceTime(250).subscribe(() => {

@@ -68,8 +68,8 @@ const appRoutes: Routes = [{
             breadcrumb: "Settings"
         }
     }, {
-        path: 'LazyLoad',
-        loadChildren: './comps/app1/lazyone/index#MessagesModule'
+        path: 'LazyLoad'//,
+        // loadChildren: './comps/app1/lazyone/index#MessagesModule'
     }, {
         path: 'Help',
         component: Help
